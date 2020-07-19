@@ -18,6 +18,5 @@ class ViewController: UIViewController  {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     }
-
 }
 

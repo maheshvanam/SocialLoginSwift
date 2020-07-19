@@ -16,5 +16,9 @@ class HomeViewController: UIViewController {
 
     @IBAction func onSigOutTapped(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signOut()
+        
+        let loginViewController = storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+        loginViewController.modalPresentationStyle = .fullScreen
+        self.present(loginViewController, animated: false, completion: nil)
     }
 }

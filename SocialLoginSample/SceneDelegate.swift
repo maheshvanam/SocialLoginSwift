@@ -7,16 +7,45 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate ,GIDSignInDelegate {
 
     var window: UIWindow?
 
+
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+            if let error = error {
+              if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                print("The user has not signed in before or they have since signed out.")
+              } else {
+                print("\(error.localizedDescription)")
+              }
+              return
+            }
+    //        let userId = user.userID
+    //        let idToken = user.authentication.idToken
+            let fullName = user.profile.name
+            print(fullName as Any)
+            self.window = self.window ?? UIWindow()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+            self.window?.rootViewController = homeViewController
+            self.window?.makeKeyAndVisible()
+        }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+      // Perform any operations when the user disconnects from app here.
+        print("disconnected")
+      // ...
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        GIDSignIn.sharedInstance().delegate = self
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

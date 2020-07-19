@@ -14,7 +14,6 @@
 		846A3B0824C17C99009F2BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846A3B0724C17C99009F2BAD /* Assets.xcassets */; };
 		846A3B0B24C17C99009F2BAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846A3B0924C17C99009F2BAD /* LaunchScreen.storyboard */; };
 		84C1D72124C1B94900D62E23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1D72024C1B94900D62E23 /* HomeViewController.swift */; };
-		84C1D72324C1C64300D62E23 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1D72224C1C64300D62E23 /* CustomNavigationController.swift */; };
 		A12210508AD6C015B8B9284E /* Pods_SocialLoginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1865CC5F195FFDB31718BA /* Pods_SocialLoginSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,6 @@
 		846A3B0A24C17C99009F2BAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846A3B0C24C17C99009F2BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C1D72024C1B94900D62E23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		84C1D72224C1C64300D62E23 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		EBA789117C55ECEA4ED35E21 /* Pods-SocialLoginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLoginSample.release.xcconfig"; path = "Target Support Files/Pods-SocialLoginSample/Pods-SocialLoginSample.release.xcconfig"; sourceTree = "<group>"; };
 		FE1865CC5F195FFDB31718BA /* Pods_SocialLoginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLoginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,7 +90,6 @@
 				846A3B0924C17C99009F2BAD /* LaunchScreen.storyboard */,
 				846A3B0C24C17C99009F2BAD /* Info.plist */,
 				84C1D72024C1B94900D62E23 /* HomeViewController.swift */,
-				84C1D72224C1C64300D62E23 /* CustomNavigationController.swift */,
 			);
 			path = SocialLoginSample;
 			sourceTree = "<group>";
@@ -231,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				846A3B0324C17C92009F2BAD /* ViewController.swift in Sources */,
-				84C1D72324C1C64300D62E23 /* CustomNavigationController.swift in Sources */,
 				846A3AFF24C17C92009F2BAD /* AppDelegate.swift in Sources */,
 				846A3B0124C17C92009F2BAD /* SceneDelegate.swift in Sources */,
 				84C1D72124C1B94900D62E23 /* HomeViewController.swift in Sources */,
