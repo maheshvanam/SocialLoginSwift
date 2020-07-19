@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleSignIn
+import FBSDKCoreKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

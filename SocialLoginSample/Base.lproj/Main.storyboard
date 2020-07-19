@@ -16,18 +16,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6g1-HD-2yT" customClass="GIDSignInButton">
-                                <rect key="frame" x="92" y="707" width="230" height="59"/>
+                                <rect key="frame" x="97" y="468" width="220" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="atW-sc-RGC"/>
-                                    <constraint firstAttribute="width" constant="230" id="i1i-iG-hLM"/>
+                                    <constraint firstAttribute="height" constant="30" id="8Ss-sa-HpK"/>
+                                    <constraint firstAttribute="width" constant="220" id="i1i-iG-hLM"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6g1-HD-2yT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ooy-Kd-5vz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6g1-HD-2yT" secondAttribute="bottom" constant="96" id="g9d-Xa-gVk"/>
+                            <constraint firstItem="6g1-HD-2yT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="P3E-7d-Bsg"/>
+                            <constraint firstItem="6g1-HD-2yT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vOY-BN-QYa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
