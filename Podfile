@@ -7,4 +7,6 @@ target 'SocialLoginSample' do
 
   # Pods for SocialLoginSample
 pod 'GoogleSignIn'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 end
