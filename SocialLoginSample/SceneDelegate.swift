@@ -8,11 +8,12 @@
 
 import UIKit
 import GoogleSignIn
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate ,GIDSignInDelegate {
-
+    
     var window: UIWindow?
-
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
             if let error = error {
@@ -23,15 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate ,GIDSignInDelegate {
               }
               return
             }
-    //        let userId = user.userID
-    //        let idToken = user.authentication.idToken
             let fullName = user.profile.name
             print(fullName as Any)
-            self.window = self.window ?? UIWindow()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-            self.window?.rootViewController = homeViewController
-            self.window?.makeKeyAndVisible()
+            navigateToHome()
         }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
@@ -45,6 +40,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate ,GIDSignInDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        if AccessToken.current != nil {
+            navigateToHome()
+        }
+
         GIDSignIn.sharedInstance().delegate = self
         guard let _ = (scene as? UIWindowScene) else { return }
     }
@@ -77,6 +76,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate ,GIDSignInDelegate {
         // to restore the scene back to its current state.
     }
 
+    func navigateToHome(){
+        self.window = self.window ?? UIWindow()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeViewController = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        self.window?.rootViewController = homeViewController
+        self.window?.makeKeyAndVisible()
+    }
 
 }
 

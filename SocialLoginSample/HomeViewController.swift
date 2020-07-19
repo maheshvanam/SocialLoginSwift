@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import FBSDKLoginKit
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,8 +16,11 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func onSigOutTapped(_ sender: Any) {
-        GIDSignIn.sharedInstance()?.signOut()
-        
+        if GIDSignIn.sharedInstance()?.currentUser != nil {
+            GIDSignIn.sharedInstance()?.signOut()
+        } else {
+            LoginManager().logOut()
+        }
         let loginViewController = storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
         loginViewController.modalPresentationStyle = .fullScreen
         self.present(loginViewController, animated: false, completion: nil)

@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 import FBSDKLoginKit
-class ViewController: UIViewController  {
+class ViewController: UIViewController,LoginButtonDelegate {
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     let fbSignInButton = FBLoginButton()
@@ -19,12 +19,31 @@ class ViewController: UIViewController  {
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         fbSignInButton.center = view.center
         view.addSubview(fbSignInButton)
-
+        fbSignInButton.delegate = self
         if let token = AccessToken.current,
             !token.isExpired {
-            print("User is logged in, do work such as go to next view controller.")
+            let home = storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+            navigationController?.present(home, animated: true, completion: nil)
         }
-        fbSignInButton.permissions =  ["public_profile", "email"]
     }
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if ((error) != nil) {
+            print(error!.localizedDescription)
+        }
+        else if result!.isCancelled {
+            print("Cancelled")
+        }
+        else {
+            let homeViewController = storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+            homeViewController.modalPresentationStyle = .fullScreen
+            present(homeViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("logOut")
+    }
+    
 }
 
