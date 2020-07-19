@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843C9F6224C46CDC00E32CF8 /* HomeViewController+SharedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C9F6124C46CDC00E32CF8 /* HomeViewController+SharedDelegate.swift */; };
 		846A3AFF24C17C92009F2BAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A3AFE24C17C92009F2BAD /* AppDelegate.swift */; };
 		846A3B0124C17C92009F2BAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A3B0024C17C92009F2BAD /* SceneDelegate.swift */; };
 		846A3B0324C17C92009F2BAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A3B0224C17C92009F2BAD /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		49F4108C62348F785B6592C8 /* Pods-SocialLoginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLoginSample.debug.xcconfig"; path = "Target Support Files/Pods-SocialLoginSample/Pods-SocialLoginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		843C9F6124C46CDC00E32CF8 /* HomeViewController+SharedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+SharedDelegate.swift"; sourceTree = "<group>"; };
 		846A3AFB24C17C92009F2BAD /* SocialLoginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLoginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A3AFE24C17C92009F2BAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A3B0024C17C92009F2BAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		843C9F5E24C46C9500E32CF8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				846A3B0924C17C99009F2BAD /* LaunchScreen.storyboard */,
+				846A3B0024C17C92009F2BAD /* SceneDelegate.swift */,
+				846A3AFE24C17C92009F2BAD /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		843C9F5F24C46CB700E32CF8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				846A3B0224C17C92009F2BAD /* ViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		843C9F6024C46CCA00E32CF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84C1D72024C1B94900D62E23 /* HomeViewController.swift */,
+				843C9F6124C46CDC00E32CF8 /* HomeViewController+SharedDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		846A3AF224C17C92009F2BAD = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +111,12 @@
 		846A3AFD24C17C92009F2BAD /* SocialLoginSample */ = {
 			isa = PBXGroup;
 			children = (
-				846A3AFE24C17C92009F2BAD /* AppDelegate.swift */,
-				846A3B0024C17C92009F2BAD /* SceneDelegate.swift */,
-				846A3B0224C17C92009F2BAD /* ViewController.swift */,
+				843C9F6024C46CCA00E32CF8 /* Home */,
+				843C9F5F24C46CB700E32CF8 /* Login */,
+				843C9F5E24C46C9500E32CF8 /* SupportingFiles */,
 				846A3B0424C17C92009F2BAD /* Main.storyboard */,
 				846A3B0724C17C99009F2BAD /* Assets.xcassets */,
-				846A3B0924C17C99009F2BAD /* LaunchScreen.storyboard */,
 				846A3B0C24C17C99009F2BAD /* Info.plist */,
-				84C1D72024C1B94900D62E23 /* HomeViewController.swift */,
 			);
 			path = SocialLoginSample;
 			sourceTree = "<group>";
@@ -231,6 +258,7 @@
 				846A3AFF24C17C92009F2BAD /* AppDelegate.swift in Sources */,
 				846A3B0124C17C92009F2BAD /* SceneDelegate.swift in Sources */,
 				84C1D72124C1B94900D62E23 /* HomeViewController.swift in Sources */,
+				843C9F6224C46CDC00E32CF8 /* HomeViewController+SharedDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
