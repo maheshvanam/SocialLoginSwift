@@ -38,6 +38,15 @@ class HomeViewController: UIViewController {
         picker.sourceType = .photoLibrary
         self.present(picker, animated: true, completion: nil)
     }
+    
+    @IBAction func didShareLinkTapped(_ sender: Any) {
+        let shareLinkContent = ShareLinkContent()
+        shareLinkContent.contentURL = URL(string:"https://developers.facebook.com")!
+        let dialog = ShareDialog(fromViewController: self, content: shareLinkContent, delegate: self)
+        
+        print("AccessToken at shareLink: ",AccessToken.current?.tokenString)
+        dialog.show()
+    }
 }
 
 extension HomeViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -50,6 +59,7 @@ extension HomeViewController:UIImagePickerControllerDelegate,UINavigationControl
                 let content = SharePhotoContent()
                 content.photos = [sharePhoto]
                 let dialog = ShareDialog(fromViewController: self, content: content, delegate: self)
+                print("AccessToken at photo: ",AccessToken.current?.tokenString)
                 dialog.show()
                 
             }

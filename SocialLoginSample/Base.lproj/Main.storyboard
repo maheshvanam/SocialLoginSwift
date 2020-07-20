@@ -76,13 +76,27 @@
                                     <action selector="didShareTapped:" destination="3MY-Hy-dT9" eventType="touchUpInside" id="MEd-vu-zgu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-Vv-Iav">
+                                <rect key="frame" x="132" y="165" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.93953961129999997" green="0.70867711310000003" blue="0.19307544830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KQA-bG-IaR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="lmA-r5-0qJ"/>
+                                </constraints>
+                                <state key="normal" title="share link"/>
+                                <connections>
+                                    <action selector="didShareLinkTapped:" destination="3MY-Hy-dT9" eventType="touchUpInside" id="39H-Aa-nqc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lGW-Jd-HYH" firstAttribute="top" secondItem="FSf-v8-DNd" secondAttribute="bottom" constant="32" id="2Rg-L3-tqy"/>
                             <constraint firstItem="lGW-Jd-HYH" firstAttribute="centerY" secondItem="oov-Nc-URF" secondAttribute="centerY" id="Ghb-8M-kZs"/>
+                            <constraint firstItem="sFe-Vv-Iav" firstAttribute="top" secondItem="BlC-qS-hva" secondAttribute="top" constant="121" id="RSG-8i-dJl"/>
                             <constraint firstItem="FSf-v8-DNd" firstAttribute="centerX" secondItem="oov-Nc-URF" secondAttribute="centerX" id="aPD-aH-Jdv"/>
                             <constraint firstItem="lGW-Jd-HYH" firstAttribute="centerX" secondItem="oov-Nc-URF" secondAttribute="centerX" id="h8w-tQ-lcm"/>
+                            <constraint firstItem="sFe-Vv-Iav" firstAttribute="centerX" secondItem="oov-Nc-URF" secondAttribute="centerX" id="hKn-qk-e3f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BlC-qS-hva"/>
                     </view>
@@ -90,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foL-MO-7Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="101.78571428571428"/>
+            <point key="canvasLocation" x="1711.5942028985507" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B1k-Xf-xY4">
